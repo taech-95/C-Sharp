@@ -56,13 +56,96 @@ namespace Learning
              string fullName = String.Concat(name, " ", surname);
              Console.WriteLine(fullName);
              Console.ReadLine();*/
-            string friendsName = "Sasha";
-            WriteSomething();
-            WriteSomethingSpecific("Mykola");
-            Console.WriteLine(Add(5, 19));
-            Console.WriteLine(Devide(7, 4));
-            GreetFriend(friendsName);
+            /* string friendsName = "Sasha";
+             WriteSomething();
+             WriteSomethingSpecific("Mykola");
+             Console.WriteLine(Add(5, 19));
+             Console.WriteLine(Devide(7, 4));*/
+            //GreetFriend(friendsName);
+            //int result = Calculate();
+            //Console.WriteLine(result);
+            //Console.ReadLine();
+
+
+            //try
+            //{
+            //    int userInputIsInt = int.Parse(num1);
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Please enter only numbers");
+
+            //}
+
+            //operators 
+            int number1 = 5;
+            int number3 = -number1;
+            number1++;
+            ++number1;
+            bool isTrue = !true;
+            number3--;
+            --number3;
+
+            //TryParse
+            Console.WriteLine("Please enter the first number");
+
+            int parsedInt;
+            bool succes = int.TryParse(Console.ReadLine(), out parsedInt);
+            if (succes)
+            {
+                Console.WriteLine(parsedInt);
+            }
+
+
+            int temp = -5;
+            string stateOfMatter;
+            if (temp <5)
+            {
+                stateOfMatter = "solid";
+            }
+            else
+            {
+                stateOfMatter = "liquid";
+            }
+
+            stateOfMatter = temp < 0 ? "solid" : "liquid";
+            Console.WriteLine($"State of matter is {stateOfMatter}");
+
+            Console.WriteLine("Enter a temperature");
+            string validTemp = Console.ReadLine();
+            string response;
+            bool parseSuccess = int.TryParse(validTemp, out int temperature);
+            if (parseSuccess)
+            {
+                response = temperature > 28 ? "it is hot here" : temperature <= 15 ? "it is too cold here" : "it is ok";
+                Console.WriteLine(response);
+            }
+
+            Person_Class Mykola = new Person_Class("Mykola", "Maksymov","brown",26);
+            Box box = new Box();
+            box.SetLength(3);
+            Console.WriteLine("Box length is " + box.GetLength());
+            box.Width = 6;
+            Console.WriteLine("Box width is " + box.Width);
+            Box box2 = new Box(5, 3, 8);
+            box.DisplayInfo();
+
+
 
         }
+        public static int Calculate()
+        {
+            Console.WriteLine("Please enter the first number");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the first number");
+            int num2 = int.Parse(Console.ReadLine());
+            return num1 + num2;
+        }
+        
+
+
+
     }
+
+
 }
