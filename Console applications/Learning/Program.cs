@@ -77,59 +77,120 @@ namespace Learning
 
             //}
 
-            //operators 
-            int number1 = 5;
-            int number3 = -number1;
-            number1++;
-            ++number1;
-            bool isTrue = !true;
-            number3--;
-            --number3;
+            ////operators 
+            //int number1 = 5;
+            //int number3 = -number1;
+            //number1++;
+            //++number1;
+            //bool isTrue = !true;
+            //number3--;
+            //--number3;
 
-            //TryParse
-            Console.WriteLine("Please enter the first number");
+            ////TryParse
+            //Console.WriteLine("Please enter the first number");
 
-            int parsedInt;
-            bool succes = int.TryParse(Console.ReadLine(), out parsedInt);
-            if (succes)
+            //int parsedInt;
+            //bool succes = int.TryParse(Console.ReadLine(), out parsedInt);
+            //if (succes)
+            //{
+            //    Console.WriteLine(parsedInt);
+            //}
+
+
+            //int temp = -5;
+            //string stateOfMatter;
+            //if (temp <5)
+            //{
+            //    stateOfMatter = "solid";
+            //}
+            //else
+            //{
+            //    stateOfMatter = "liquid";
+            //}
+
+            //stateOfMatter = temp < 0 ? "solid" : "liquid";
+            //Console.WriteLine($"State of matter is {stateOfMatter}");
+
+            //Console.WriteLine("Enter a temperature");
+            //string validTemp = Console.ReadLine();
+            //string response;
+            //bool parseSuccess = int.TryParse(validTemp, out int temperature);
+            //if (parseSuccess)
+            //{
+            //    response = temperature > 28 ? "it is hot here" : temperature <= 15 ? "it is too cold here" : "it is ok";
+            //    Console.WriteLine(response);
+            //}
+
+            //Person_Class Mykola = new Person_Class("Mykola", "Maksymov","brown",26);
+            //Box box = new Box();
+            //box.SetLength(3);
+            //Console.WriteLine("Box length is " + box.GetLength());
+            //box.Width = 6;
+            //Console.WriteLine("Box width is " + box.Width);
+            //Box box2 = new Box(5, 3, 8);
+            //box.DisplayInfo();
+
+            int [] grades = new int[5];
+            grades[0] = 5;
+            grades[1] = 15;
+            grades[2] = 45;
+            grades[3] = 25;
+            grades[4] = 10;
+
+            int[] nums = new int[10];
+            for (int i = 0; i < nums.Length; i++)
             {
-                Console.WriteLine(parsedInt);
+                nums[i] = i;
+            }
+            int counter = 0;
+            foreach (int  i in nums) 
+            {
+                Console.WriteLine($"Element {counter} = {i} ");
+                counter++;
             }
 
 
-            int temp = -5;
-            string stateOfMatter;
-            if (temp <5)
+            string[,] matrix;
+            int[,] array2D = new int[,]
             {
-                stateOfMatter = "solid";
-            }
-            else
-            {
-                stateOfMatter = "liquid";
-            }
+                {1,5,8,10 },
+                {4,9,17,22},
+                {15,99,41,32 }
+            };
 
-            stateOfMatter = temp < 0 ? "solid" : "liquid";
-            Console.WriteLine($"State of matter is {stateOfMatter}");
-
-            Console.WriteLine("Enter a temperature");
-            string validTemp = Console.ReadLine();
-            string response;
-            bool parseSuccess = int.TryParse(validTemp, out int temperature);
-            if (parseSuccess)
+            Console.WriteLine("Central value is: " + array2D[1,2]);
+            foreach (int num in array2D)
             {
-                response = temperature > 28 ? "it is hot here" : temperature <= 15 ? "it is too cold here" : "it is ok";
-                Console.WriteLine(response);
+                Console.WriteLine(num + " ");
             }
 
-            Person_Class Mykola = new Person_Class("Mykola", "Maksymov","brown",26);
-            Box box = new Box();
-            box.SetLength(3);
-            Console.WriteLine("Box length is " + box.GetLength());
-            box.Width = 6;
-            Console.WriteLine("Box width is " + box.Width);
-            Box box2 = new Box(5, 3, 8);
-            box.DisplayInfo();
+            for (int i = 0; i < array2D.GetLength(0); i++)
+            {
+                //Console.WriteLine();
+                for (int j = 0; j < array2D.GetLength(1); j++)
+                {
+                    if (array2D[i,j]%2==0)
+                    {
+                        Console.Write(array2D[i, j] + " ");
+                    }
+                    
+                }
+                
+            }
+            Console.WriteLine();
+            for (int i = 0; i < array2D.GetLength(0); i++)
+            {
+                //Console.WriteLine();
+                for (int j = 0; j < array2D.GetLength(1); j++)
+                {
+                    if (i==j)
+                    {
+                        Console.WriteLine((array2D[i, j] + " "));
+                    }
 
+                }
+
+            }
 
 
         }
