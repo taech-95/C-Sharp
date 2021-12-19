@@ -192,6 +192,46 @@ namespace Learning
 
             }
 
+            int[][] jaggedArray = new int[3][];
+            jaggedArray[0] = new int[5];
+            jaggedArray[1] = new int[3];
+            jaggedArray[2] = new int[2];
+
+            jaggedArray[0] = new int[]
+            {
+                2,3,5,7,11
+            };
+            jaggedArray[1] = new int[] { 1, 2, 3 };
+            jaggedArray[2] = new int[] { 13, 21 };
+
+            int[][] jaggedArray2 = new int[][]
+            {
+                new int[] {2,3,5,7,11},
+                new int[] {1,2,3}
+                
+            };
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine(jaggedArray2[0][2]);
+            for (int i = 0; i < jaggedArray2.Length; i++)
+            {
+                Console.WriteLine("Element {0}",i);
+                for (int j = 0; j < jaggedArray2[i].Length; j++)
+                {
+                    Console.WriteLine(jaggedArray2[i][j]);
+                }
+            }
+
+
+            string[][] friends = new string[][]
+            {
+                new string [] {"Mykola", "Olena", "Stefan"},
+                new string [] {"Oksana", "Michail"},
+                new string [] {"Oleg", "Oksana"}
+            };
+
+            Console.WriteLine("hi {0}, i would like to introduce {1} to you.", friends[0][0], friends[1][1] );
 
         }
         public static int Calculate()
