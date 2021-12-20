@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -223,6 +224,10 @@ namespace Learning
                 }
             }
 
+            int[] grades1 = new int[] { 15, 18, 23, 12, 6, 13 };
+            double averageResult = GetAverage(grades1);
+            Console.WriteLine(averageResult);
+
 
             string[][] friends = new string[][]
             {
@@ -231,9 +236,70 @@ namespace Learning
                 new string [] {"Oleg", "Oksana"}
             };
 
-            Console.WriteLine("hi {0}, i would like to introduce {1} to you.", friends[0][0], friends[1][1] );
+            Console.WriteLine("Hi {0}, i would like to introduce {1} to you.", friends[0][0], friends[1][1] );
 
+            int[] happiness = new int[] { 2, 3, 4, 5, 6 };
+            SunIsShining(happiness);
+            foreach (int i in happiness)
+            {
+                Console.WriteLine(i);
+            }
+
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(5);
+            arrayList.Add("hello");
+            arrayList.Add(3.14);
+            arrayList.Remove(5);
+            arrayList.Add(17);
+            double sum = 0;
+            foreach (object obj  in arrayList)
+            {
+                if (obj is int)
+                {
+                    sum += Convert.ToDouble(obj);
+                }
+                else if (obj is double)
+                {
+                    sum += (double)obj;
+                }
+
+            }
+            Console.WriteLine(sum);
         }
+
+
+        public static int MinV2(params int[] numbers)
+        {
+            int min = int.MaxValue;
+            foreach (int number in numbers)
+            {
+                if (min > number)
+                {
+                    min = number;
+                }
+            }
+            return min;
+        }
+
+        public static void ParamsMethod2(params object[] stuff)
+        {
+            foreach (object obj in stuff)
+            {
+                Console.Write(obj + " ");
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void ParamsMethod (params string[] sentence)
+        {
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                Console.Write(sentence[i] + " ");
+            }
+        }
+
+
         public static int Calculate()
         {
             Console.WriteLine("Please enter the first number");
@@ -243,8 +309,26 @@ namespace Learning
             return num1 + num2;
         }
         
+        public static double GetAverage(int [] gradesArray)
+        {
+            int size = gradesArray.Length;
+            double average =0, sum=0;
+            for (int i = 0; i < size; i++)
+            {
+                sum += gradesArray[i];
+                
+            }
+            average = (double)sum / size;
+            return average;
+        }
 
-
+        public static void  SunIsShining(int [] x)
+        {
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] += 2;
+            }
+        }
 
     }
 
