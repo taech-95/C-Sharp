@@ -192,6 +192,43 @@ namespace Learning
                 }
 
             }
+            Hashtable table = new Hashtable();
+            Stack<int> stack = new Stack<int>();
+            Console.WriteLine("Stacks");
+            stack.Push(1);
+            Console.WriteLine(stack.Peek());
+            stack.Push(2);
+            Console.WriteLine(stack.Peek());
+            stack.Push(3);
+            Console.WriteLine(stack.Peek());
+            stack.Push(4);
+            Console.WriteLine(stack.Peek());
+
+            if (stack.Count >0)
+            {
+                stack.Pop();
+            }
+
+            while (stack.Count > 0 )
+            {
+                stack.Pop();
+                Console.WriteLine("Stack count " + stack.Count);
+            }
+
+            int[] numbers = new int[] { 1, 2, 3, 4 };
+            Stack<int> newStack = new Stack<int>();
+            foreach (int item in numbers)
+            {
+                Console.WriteLine(item);
+                newStack.Push(item);
+            }
+
+            while (newStack.Count > 0)
+            {
+                int number = newStack.Pop();
+                Console.WriteLine(number);
+            }
+            Console.WriteLine("_____________________________");
 
             int[][] jaggedArray = new int[3][];
             jaggedArray[0] = new int[5];
@@ -224,6 +261,11 @@ namespace Learning
                 }
             }
 
+            //for (int i = 100; i < 170; i=+ 2)
+            //{
+            //    Console.Write(i + " ");
+            //}
+
             int[] grades1 = new int[] { 15, 18, 23, 12, 6, 13 };
             double averageResult = GetAverage(grades1);
             Console.WriteLine(averageResult);
@@ -244,6 +286,27 @@ namespace Learning
             {
                 Console.WriteLine(i);
             }
+
+            var nums1 = new List<int>();
+            //for (int i = 100; i <= 170; i = +2)
+            //{
+            //    nums1.Add(i);
+            //}
+            //foreach (int num in nums1)
+            //{
+            //    Console.Write(num +" ");
+            //}
+            Console.WriteLine("Queue");
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+            Console.WriteLine(queue.Peek());
+            int queueItem = queue.Dequeue();
+            Console.WriteLine("removed item" + queueItem);
+
 
             ArrayList arrayList = new ArrayList();
             arrayList.Add(5);
