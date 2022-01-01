@@ -305,7 +305,8 @@ namespace Learning
             queue.Enqueue(5);
             Console.WriteLine(queue.Peek());
             int queueItem = queue.Dequeue();
-            Console.WriteLine("removed item" + queueItem);
+            Console.WriteLine("removed item " + queueItem);
+
 
 
             ArrayList arrayList = new ArrayList();
