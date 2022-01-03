@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BCD93702-A050-4553-896E-8D33849EB343}</ProjectGuid>
+    <ProjectGuid>{C702A185-D785-4C81-B9CE-797F2A1479F0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Advanced_OOP</RootNamespace>
-    <AssemblyName>Advanced OOP</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>PolymorphismC</RootNamespace>
+    <AssemblyName>PolymorphismC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,13 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="ElectricalDevice.cs" />
+    <Compile Include="Audi.cs" />
+    <Compile Include="BMW.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="CarIDInfo.cs" />
+    <Compile Include="Cube.cs" />
+    <Compile Include="M3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Radio.cs" />
-    <Compile Include="TV.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="Sphere.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

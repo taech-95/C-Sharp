@@ -11,8 +11,7 @@ namespace Advanced_OOP
  
         public Radio( bool isOn, string brand): base (isOn, brand)
         {
-            this.IsOn = isOn;
-            this.Brand = brand;
+          
         }
 
         public void ListenRadio()
