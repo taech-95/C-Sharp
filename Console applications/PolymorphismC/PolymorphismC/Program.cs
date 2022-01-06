@@ -12,6 +12,35 @@ namespace PolymorphismC
         static void Main(string[] args)
         {
 
+            Random dice = new Random();
+            int numEyes;
+            for (int i = 0; i < 10; i++)
+            {
+                numEyes = dice.Next(0,10); 
+                Console.WriteLine(numEyes);
+            }
+
+            int random = dice.Next(1, 4);
+            if (random == 1)
+            {
+                Console.WriteLine("YES");
+            }
+            else if (random == 2)
+            {
+                Console.WriteLine("May be");
+            }
+
+            else
+            {
+                Console.WriteLine("NO");
+            }
+
+
+            DateTime dateTime = new DateTime(1995, 1, 8);
+            Console.WriteLine(dateTime.DayOfWeek); 
+
+
+
             var cars = new List<Car>
             {
                 new Audi(200, "blue", "A4"),
@@ -48,6 +77,16 @@ namespace PolymorphismC
             {
 
                 Console.WriteLine(shape.Volume());
+                Cube iceCube = shape as Cube;
+                if (iceCube == null)
+                {
+                    Console.WriteLine("This is no cube");
+                }
+
+                if (iceCube is Cube)
+                {
+                    Console.WriteLine("This is a cube");
+                }
             }
             Console.ReadKey();
         }
