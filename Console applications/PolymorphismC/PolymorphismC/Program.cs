@@ -37,8 +37,9 @@ namespace PolymorphismC
 
 
             DateTime dateTime = new DateTime(1995, 1, 8);
-            Console.WriteLine(dateTime.DayOfWeek); 
-
+            Console.WriteLine(dateTime.DayOfWeek);
+            Console.WriteLine(dateTime);
+            Console.WriteLine(dateTime.Ticks);
 
 
             var cars = new List<Car>
