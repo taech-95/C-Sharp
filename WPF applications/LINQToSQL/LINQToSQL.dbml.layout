@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LINQToSQL">
+  <DataContextMoniker Name="/LINQToSQLDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c3c0cf99-48bd-4bbc-83ad-c6db5538d7af" absoluteBounds="0.5, 0.5, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/LINQToSQLDataContext/University" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7495c34b-4399-4c7e-86eb-0e7a61f410dd" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="393fb265-a217-4310-b81d-e958795889ee" absoluteBounds="4.625, 2, 2, 1.6801985950271288">
+      <DataClassMoniker Name="/LINQToSQLDataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3490ee5d-f174-4115-b454-b726e0674f94" absoluteBounds="4.64, 2.46, 1.9700000000000002, 1.1201985950271287" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.12932455296318); (5.625 : 1.12932455296318); (5.625 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LINQToSQLDataContext/University/University_Student" />
+      <nodes>
+        <classShapeMoniker Id="c3c0cf99-48bd-4bbc-83ad-c6db5538d7af" />
+        <classShapeMoniker Id="393fb265-a217-4310-b81d-e958795889ee" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="11e37126-5b2d-4531-98bb-7cda67aeffd9" absoluteBounds="0.5, 2.25, 2, 1.2586491059263547">
+      <DataClassMoniker Name="/LINQToSQLDataContext/Lecture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fc55780-3f85-4e4b-8595-a37ec396b5d3" absoluteBounds="0.51500000000000012, 2.71, 1.9700000000000002, 0.69864910592635465" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

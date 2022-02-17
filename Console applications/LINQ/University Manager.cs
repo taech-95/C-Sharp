@@ -72,8 +72,6 @@ namespace LINQ
 
         public void ReceiveStudentsUniversity(int id)
         {
-           
-            bool correctId = int.TryParse(Console.ReadLine(), out id);
             IEnumerable<Student> myStudents = from student in students
                                               join university in universities on student.UniversityId equals university.Id
                                               where university.Id == id
@@ -84,6 +82,19 @@ namespace LINQ
                 student.Print();
             }
 
+        }
+
+        public void StudentAndUniviersityNames()
+        {
+            var newCollection = from student in students
+                                join university in universities on student.UniversityId equals university.Id
+                                orderby student.Name
+                                select new { StudentName = student.Name, UniversityName = university.Name };
+            Console.WriteLine("New Collections");
+            foreach (var col in newCollection)
+            {
+                Console.WriteLine($"Student {col.StudentName}, from University {col.UniversityName}");
+            }
         }
 
 

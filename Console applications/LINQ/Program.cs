@@ -32,7 +32,10 @@ namespace LINQ
             IEnumerable<int> sortedInts = from i in someInts orderby i select i;
             IEnumerable<int> reversedInts = sortedInts.Reverse();
             IEnumerable<int> reversedSortedInts = from i in someInts orderby i descending select i;
+            um.StudentAndUniviersityNames();
             Console.ReadLine();
+
+
         }
     }
 }
