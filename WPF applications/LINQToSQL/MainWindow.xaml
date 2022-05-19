@@ -8,5 +8,15 @@
         Title="MainWindow" Height="450" Width="530">
     <Grid>
         <DataGrid x:Name="MainDataGrid" HorizontalAlignment="Left" Height="400" Margin="10" VerticalAlignment="Top" Width="500"></DataGrid>
+        <Button Content="Написати до Пані Олександри" HorizontalAlignment="Left" Height="101" Margin="170,228,0,0" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.901"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 
 namespace LINQToSQL
 {
+    string answer = '';
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -78,7 +79,25 @@ namespace LINQToSQL
             Student Oksana = dataContext.Students.First(st => st.Name.Equals("Oksana"));
             Student Viktor = dataContext.Students.First(st => st.Name.Equals("Viktor"));
             Student Olena = dataContext.Students.First(st => st.Name.Equals("Olena"));
+            Lecture Math = dataContext.Lectures.First(lec => lec.Name.Equals("Math"));
+            Lecture History = dataContext.Lectures.First(lec => lec.Name.Equals("History"));
+
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = Mykola, Lecture = Math });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = Oksana, Lecture = Math });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = Viktor, Lecture = History });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = Olena, Lecture = History });
+            dataContext.SubmitChanges();
+            MainDataGrid.ItemsSource = dataContext.StudentLectures;
+
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string answer = null;
+            if (answer == "ясно")
+            {
+                this.Close();
+            }
+        }
     }
 }
